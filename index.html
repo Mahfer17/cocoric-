@@ -8,7 +8,6 @@
     <title>Cocórico</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: 'Quicksand', sans-serif;
@@ -71,6 +70,14 @@
             background-color: #FFFCF0;
             padding: 20px 0;
             border-radius: 15px;
+        }
+
+        .menu-acessibilidade .btn-danger {
+            background-color: #FF3B30; /* Red color for accessibility button */
+        }
+
+        .menu-acessibilidade .btn-danger:hover {
+            background-color: #e22e1a;
         }
     </style>
 </head>
@@ -158,6 +165,21 @@
                         </div>
                         <div class="form-group mb-3">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email
+                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" class="form-control rounded-3 mt-1" rows="4" placeholder="Escreva sua mensagem..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-cocorico btn-lg">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-                                
+    <footer class="text-center p-3 fst-italic">
+        <p>Acesse nossas redes:</p>
+        <div class="footer-icons">
+            <i class="bi bi-wh
+```
