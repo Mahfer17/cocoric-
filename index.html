@@ -1,185 +1,259 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <title>Cocórico</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <style>
-        body {
-            font-family: 'Quicksand', sans-serif;
-            background-color: #f9f9f9;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Fredoka One', cursive;
-            color: #FF6A13; /* Cor vibrante do programa */
-        }
-
-        .btn-cocorico {
-            background-color: #FF6A13; /* Laranja do programa */
-            color: white;
-        }
-
-        .btn-cocorico:hover {
-            background-color: #e65a00;
-        }
-
-        .nav-link {
-            color: #3f3f3f !important;
-            font-weight: 600;
-        }
-
-        .nav-link:hover {
-            color: #FF6A13 !important;
-        }
-
-        .img-inicio {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-
-        .img-fluid {
-            border-radius: 10px;
-        }
-
-        .galeria img {
-            border-radius: 15px;
-            margin-bottom: 20px;
-        }
-
-        .form-control {
-            border-radius: 10px;
-            border: 2px solid #FF6A13;
-        }
-
-        .footer-icons i {
-            font-size: 30px;
-            margin: 10px;
-            color: #FF6A13;
-        }
-
-        .footer-icons i:hover {
-            color: #e65a00;
-        }
-
-        .section-bg {
-            background-color: #FFFCF0;
-            padding: 20px 0;
-            border-radius: 15px;
-        }
-
-        .menu-acessibilidade .btn-danger {
-            background-color: #FF3B30; /* Red color for accessibility button */
-        }
-
-        .menu-acessibilidade .btn-danger:hover {
-            background-color: #e22e1a;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cocoricó — Site fã</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <header class="p-5">
-        <nav class="container d-flex justify-content-between align-items-center">
-            <img src="cocorico_logo.jpg" alt="Logo do Cocorico" class="nav-img" loading="lazy" width="150">
-            <ul class="nav mt-5">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>
-            <div id="acessibilidade" class="menu-acessibilidade">
-                <button id="botao-acessibilidade" class="btn btn-danger fw-bold rotacao-botao" aria-expanded="false">Acessibilidade</button>
-                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
-                    <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="Diminuir o tamanho da fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores"><i class="bi bi-shadows"></i></button>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
-    <main class="container my-5">
-        <section id="inicio" class="my-5 section-bg">
-            <div class="d-flex justify-content-between align-items-center">
-                <div>
-                    <h1 class="display-4 text-primary fw-bold">Boas-vindas ao</h1>
-                    <img src="cocorico_intro.jpg" class="img-fluid mb-3" alt="Imagem introdutória do programa Cocorico" loading="lazy">
-                    <a href="#cocorico" class="btn btn-cocorico btn-lg">Quero conhecer!</a>
-                </div>
-                <img src="img/cocorico_characters.jpg" alt="Personagens do programa Cocorico" title="Personagens do Cocorico" class="img-fluid img-inicio">
-            </div>
-        </section>
+  <header class="top">
+    <div class="container">
+      <h1>Cocoricó 🐓</h1>
+      <p class="tagline">A turma da fazenda mais divertida do Brasil!</p>
+    </div>
+  </header>
 
-        <section id="cocorico" class="my-5 pt-6">
-            <div class="container d-flex align-items-center">
-                <div class="col-4 d-flex justify-content-center">
-                    <img src="img/cocorico_char.jpg" class="rounded-circle" width="250" height="300" loading="lazy" alt="Zé Cocoroca">
-                </div>
-                <div class="col-5">
-                    <h2>O que é Cocórico?</h2>
-                    <p>O Cocórico foi um programa infantil brasileiro da TV Cultura, exibido de 1996 a 2000. Ele apresentava personagens como o galo Zé Cocoroca e seus amigos, que moravam em uma fazenda e viviam aventuras educativas sobre amizade, natureza e vida rural. Com seu conteúdo lúdico e musical, o programa conquistou o público infantil e se tornou um marco na TV brasileira.</p>
-                </div>
-            </div>
-        </section>
+  <main id="main" class="container">
+    <!-- SOBRE -->
+    <section class="about">
+      <h2>Sobre o programa</h2>
+      <!-- Troque o src pela sua imagem (ex: imagens/fazenda.jpg) -->
+      <img src="imagens/fazenda.jpg" alt="Fazenda do Cocoricó" class="about-img" />
+      <p><strong>Cocoricó</strong> é uma série infantil brasileira exibida inicialmente pela TV Cultura. Acompanha as histórias do Júlio e dos animais da fazenda: Lilica, Alípio, Zazá, Caco e mais. Mistura músicas, brincadeiras e aprendizados para crianças.</p>
+    </section>
 
-        <section id="galeria" class="section-bg">
-            <h2 class="text-center pt-5">Galeria</h2>
-            <div class="container p-3 mt-3">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/cocorico1.jpg" class="img-fluid rounded-5" alt="Imagem do Cocorico" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/cocorico2.jpg" class="img-fluid rounded-5" alt="Imagem do Cocorico" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/cocorico3.jpg" class="img-fluid rounded-5" alt="Imagem do Cocorico" loading="lazy">
-                    </div>
-                </div>
-                <div class="row mt-4 justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/cocorico4.jpg" class="img-fluid rounded-5" alt="Imagem do Cocorico" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/cocorico5.jpg" class="img-fluid rounded-5" alt="Imagem do Cocorico" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/cocorico6.jpg" class="img-fluid rounded-5" alt="Imagem do Cocorico" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- PERSONAGENS -->
+    <section class="characters">
+      <h2>Personagens principais</h2>
+      <div class="grid">
+        <article class="card julio" aria-labelledby="julio-title">
+          <!-- Troque a imagem pelo arquivo que preferir -->
+          <img src="imagens/julio.png" alt="Júlio" />
+          <h3 id="julio-title">Júlio 🎶</h3>
+          <p>Garoto curioso, adora cantar e brincar com os animais da fazenda.</p>
+        </article>
 
-        <section id="contato" class="section-bg">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario">
-                    <h2 class="mb-3">Entre em contato</h2>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1" placeholder="Digite seu nome completo">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1" placeholder="Digite seu email" required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-3 mt-1" rows="4" placeholder="Escreva sua mensagem..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-cocorico btn-lg">Enviar</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+        <article class="card lilica" aria-labelledby="lilica-title">
+          <img src="imagens/lilica.png" alt="Lilica" />
+          <h3 id="lilica-title">Lilica 🐔</h3>
+          <p>Galinha carinhosa e sonhadora — melhor amiga do Júlio.</p>
+        </article>
 
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <div class="footer-icons">
-            <i class="bi bi-wh
-```
+        <article class="card alipio" aria-labelledby="alipio-title">
+          <img src="imagens/alipio.png" alt="Alípio" />
+          <h3 id="alipio-title">Alípio 🐴</h3>
+          <p>Cavalo calmo e forte, sempre ajudando na fazenda.</p>
+        </article>
+
+        <article class="card zaza" aria-labelledby="zaza-title">
+          <img src="imagens/zaza.png" alt="Zazá" />
+          <h3 id="zaza-title">Zazá 🐓</h3>
+          <p>Galinha experiente que conta causos e conselhos.</p>
+        </article>
+
+        <article class="card caco" aria-labelledby="caco-title">
+          <img src="imagens/caco.png" alt="Caco" />
+          <h3 id="caco-title">Caco 🐸</h3>
+          <p>Sapo brincalhão que traz muitas risadas.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CURIOSIDADES -->
+    <section class="curiosities">
+      <h2>Curiosidades</h2>
+      <ul>
+        <li>Estreou em 1996 na TV Cultura.</li>
+        <li>Usa bonecos manipulados por artistas e muita música.</li>
+        <li>Possui episódios educativos com valores como amizade e respeito.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Feito com carinho — site fã do Cocoricó.</p>
+    </div>
+  </footer>
+
+  <!-- BOTÃO E PAINEL DE ACESSIBILIDADE -->
+  <button id="accessBtn"
+          class="access-btn"
+          aria-label="Abrir menu de acessibilidade"
+          aria-haspopup="true"
+          aria-controls="accessPanel"
+          aria-expanded="false">
+    <!-- Substitua por uma pequena imagem/ícone se quiser -->
+    <img src="imagens/cocorico-icon.png" alt="Acessibilidade Cocoricó" />
+  </button>
+
+  <div id="accessPanel"
+       class="access-panel"
+       role="dialog"
+       aria-modal="false"
+       aria-hidden="true"
+       aria-label="Menu de acessibilidade">
+    <h3>Acessibilidade</h3>
+
+    <div class="row">
+      <span>Tamanho da fonte</span>
+      <div class="btns">
+        <button class="control" data-action="font-decrease" aria-label="Diminuir fonte">A-</button>
+        <button class="control" data-action="font-reset" aria-label="Redefinir fonte">A</button>
+        <button class="control" data-action="font-increase" aria-label="Aumentar fonte">A+</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <span>Contraste</span>
+      <div class="btns">
+        <button class="toggle" data-action="contrast" aria-pressed="false">Alto contraste</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <span>Animações</span>
+      <div class="btns">
+        <button class="toggle" data-action="reducemotion" aria-pressed="false">Reduzir animações</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <button id="closeAccess" class="control full" aria-label="Fechar painel">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    const html = document.documentElement;
+    const body = document.body;
+    const accessBtn = document.getElementById('accessBtn');
+    const panel = document.getElementById('accessPanel');
+    const closeBtn = document.getElementById('closeAccess');
+
+    // Estado com persistência
+    const state = {
+      fontScale: parseFloat(localStorage.getItem('coco_fontScale')) || 1,
+      contrast: localStorage.getItem('coco_contrast') === 'true',
+      reduceMotion: localStorage.getItem('coco_reduceMotion') === 'true'
+    };
+
+    // Apply visual state
+    function applyState() {
+      // fonte via variável no :root
+      html.style.setProperty('--font-scale', state.fontScale);
+      body.classList.toggle('high-contrast', state.contrast);
+      body.classList.toggle('reduce-motion', state.reduceMotion);
+
+      // atualiza aria-pressed nos toggles
+      const contrastBtn = panel.querySelector('[data-action="contrast"]');
+      const rmBtn = panel.querySelector('[data-action="reducemotion"]');
+      if (contrastBtn) contrastBtn.setAttribute('aria-pressed', String(state.contrast));
+      if (rmBtn) rmBtn.setAttribute('aria-pressed', String(state.reduceMotion));
+    }
+
+    function saveState() {
+      localStorage.setItem('coco_fontScale', state.fontScale);
+      localStorage.setItem('coco_contrast', state.contrast);
+      localStorage.setItem('coco_reduceMotion', state.reduceMotion);
+    }
+
+    // toggle panel (open = true/false or toggle when omitted)
+    function togglePanel(open) {
+      const willOpen = (typeof open === 'boolean') ? open : !panel.classList.contains('open');
+      if (willOpen) {
+        panel.classList.add('open');
+        panel.setAttribute('aria-hidden', 'false');
+        accessBtn.setAttribute('aria-expanded', 'true');
+        // foco no primeiro botão do painel
+        const first = panel.querySelector('button');
+        if (first) first.focus();
+        // ativa trap de foco
+        document.addEventListener('keydown', handleKeydown);
+      } else {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+        accessBtn.setAttribute('aria-expanded', 'false');
+        accessBtn.focus();
+        document.removeEventListener('keydown', handleKeydown);
+      }
+    }
+
+    // Focus trap + ESC
+    function handleKeydown(e) {
+      if (e.key === 'Escape') {
+        togglePanel(false);
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const focusable = panel.querySelectorAll('button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+
+    // Clique fora fecha
+    document.addEventListener('click', (e) => {
+      if (!panel.classList.contains('open')) return;
+      if (!panel.contains(e.target) && !accessBtn.contains(e.target)) {
+        togglePanel(false);
+      }
+    });
+
+    // Delegação de ações dentro do painel
+    panel.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (!btn) return;
+      const action = btn.getAttribute('data-action');
+      if (!action) return;
+      switch (action) {
+        case 'font-increase':
+          state.fontScale = Math.min(1.6, +(state.fontScale + 0.1).toFixed(2));
+          break;
+        case 'font-decrease':
+          state.fontScale = Math.max(0.85, +(state.fontScale - 0.1).toFixed(2));
+          break;
+        case 'font-reset':
+          state.fontScale = 1;
+          break;
+        case 'contrast':
+          state.contrast = !state.contrast;
+          break;
+        case 'reducemotion':
+          state.reduceMotion = !state.reduceMotion;
+          break;
+      }
+      applyState();
+      saveState();
+    });
+
+    // fechar botão específico
+    closeBtn.addEventListener('click', () => togglePanel(false));
+
+    // abrir/fechar com o botão principal
+    accessBtn.addEventListener('click', (e) => {
+      togglePanel();
+      e.stopPropagation();
+    });
+
+    // aplica estado inicial
+    applyState();
+  })();
+  </script>
+</body>
+</html>
+  
