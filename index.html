@@ -4,133 +4,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
     <title>Cocórico</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Fredoka One', cursive;
+            color: #FF6A13; /* Cor vibrante do programa */
+        }
+
+        .btn-cocorico {
+            background-color: #FF6A13; /* Laranja do programa */
+            color: white;
+        }
+
+        .btn-cocorico:hover {
+            background-color: #e65a00;
+        }
+
+        .nav-link {
+            color: #3f3f3f !important;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: #FF6A13 !important;
+        }
+
+        .img-inicio {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .img-fluid {
+            border-radius: 10px;
+        }
+
+        .galeria img {
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            border: 2px solid #FF6A13;
+        }
+
+        .footer-icons i {
+            font-size: 30px;
+            margin: 10px;
+            color: #FF6A13;
+        }
+
+        .footer-icons i:hover {
+            color: #e65a00;
+        }
+
+        .section-bg {
+            background-color: #FFFCF0;
+            padding: 20px 0;
+            border-radius: 15px;
+        }
+    </style>
 </head>
 
 <body>
-    <header class=" p-5">
-
-        <nav class="container d-flex justify-content-between align-items-center" >
-            <img src="cocorico 5.jpg" class="nav-img " loading="lazy">
+    <header class="p-5">
+        <nav class="container d-flex justify-content-between align-items-center">
+            <img src="cocorico_logo.jpg" alt="Logo do Cocorico" class="nav-img" loading="lazy" width="150">
             <ul class="nav mt-5">
                 <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
                 <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
             </ul>
-            <div id="acessibilidade" class="menu-acessibilidade"> 
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">acessibilidade</button>
+            <div id="acessibilidade" class="menu-acessibilidade">
+                <button id="botao-acessibilidade" class="btn btn-danger fw-bold rotacao-botao" aria-expanded="false">Acessibilidade</button>
                 <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
                     <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="diminuir o tamanho da fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores"> <i class="bi bi-shadows"></i></button>         
+                    <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="Diminuir o tamanho da fonte">A-</button>
+                    <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alterna o contraste de cores"><i class="bi bi-shadows"></i></button>
                 </div>
             </div>
         </nav>
-       
     </header>
 
-
     <main class="container my-5">
-
-        <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
-                <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas ao</h1>
-                    <img src="cocorico 2.jpg" class="mb-3" width="563"
-                        height="278" loading="lazy">
-                    <a href="#cocorico"
-                        class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero
-                        conhecer!</a>
+        <section id="inicio" class="my-5 section-bg">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="display-4 text-primary fw-bold">Boas-vindas ao</h1>
+                    <img src="cocorico_intro.jpg" class="img-fluid mb-3" alt="Imagem introdutória do programa Cocorico" loading="lazy">
+                    <a href="#cocorico" class="btn btn-cocorico btn-lg">Quero conhecer!</a>
                 </div>
-                <img src="img/lossy-page1-640px-Os_Mutantes.tif (1).png" alt="A imagem apresenta o grupo musical Os mutantes, sao tres pessoas cantando em um microfone" title="Os mutantes - CC0 Domínio Público / Acervo Arquivo Nacional" class="img-fluid img-inicio">
-
-              </div>
+                <img src="img/cocorico_characters.jpg" alt="Personagens do programa Cocorico" title="Personagens do Cocorico" class="img-fluid img-inicio">
+            </div>
         </section>
 
-        <section id="cocorico" class="my-5 pt-6 secao-cocorico" tabindex="0" aria-label="Seção explicativa sobre o programa Cocórico">
-            <div class="container d-flex align-items-center ">
-                <div class="col-4 d-flex justify-content-center ">
-                    <img src="img/image (1).png" class="rounded-pill" width="273" height="331" loading="lazy">
+        <section id="cocorico" class="my-5 pt-6">
+            <div class="container d-flex align-items-center">
+                <div class="col-4 d-flex justify-content-center">
+                    <img src="img/cocorico_char.jpg" class="rounded-circle" width="250" height="300" loading="lazy" alt="Zé Cocoroca">
                 </div>
                 <div class="col-5">
                     <h2>O que é Cocórico?</h2>
-                    <p class="p-2">O Cocórico foi um programa infantil brasileiro da TV Cultura, 
-                        exibido de 1996 a 2000. Ele apresentava personagens como o galo Zé Cocoroca e seus amigos, 
-                        que moravam em uma fazenda e viviam aventuras educativas sobre amizade, natureza e vida rural. 
-                        Com seu conteúdo lúdico e musical, o programa conquistou o público infantil e se tornou um marco na TV brasileira.</p>
+                    <p>O Cocórico foi um programa infantil brasileiro da TV Cultura, exibido de 1996 a 2000. Ele apresentava personagens como o galo Zé Cocoroca e seus amigos, que moravam em uma fazenda e viviam aventuras educativas sobre amizade, natureza e vida rural. Com seu conteúdo lúdico e musical, o programa conquistou o público infantil e se tornou um marco na TV brasileira.</p>
                 </div>
             </div>
         </section>
 
-        <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
+        <section id="galeria" class="section-bg">
             <h2 class="text-center pt-5">Galeria</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
-
+            <div class="container p-3 mt-3">
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Jorge_Ben_e_o_Trio_Mocotó_no_Teatro_da_Lagoa,_1971.tif.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
+                        <img src="img/cocorico1.jpg" class="img-fluid rounded-5" alt="Imagem do Cocorico" loading="lazy">
                     </div>
                     <div class="col-md-4">
-                        <img src="cocorico 7.jpeg" class="img-fluid rounded-5"
-                            loading="lazy">
+                        <img src="img/cocorico2.jpg" class="img-fluid rounded-5" alt="Imagem do Cocorico" loading="lazy">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/cocorico3.jpg" class="img-fluid rounded-5" alt="Imagem do Cocorico" loading="lazy">
                     </div>
                 </div>
-                <div class="row mt-4  justify-content-md-center">
+                <div class="row mt-4 justify-content-md-center">
                     <div class="col-md-4">
-                        <img src="cocorico 8.jpg" cmg-fluid rounded-5" loading="lazy">
+                        <img src="img/cocorico4.jpg" class="img-fluid rounded-5" alt="Imagem do Cocorico" loading="lazy">
                     </div>
                     <div class="col-md-4">
-                        <img src="cocorico 6.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
+                        <img src="img/cocorico5.jpg" class="img-fluid rounded-5" alt="Imagem do Cocorico" loading="lazy">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/cocorico6.jpg" class="img-fluid rounded-5" alt="Imagem do Cocorico" loading="lazy">
                     </div>
                 </div>
-             </div>
+            </div>
         </section>
 
-        <section id="contato">
+        <section id="contato" class="section-bg">
             <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
+                <div class="col-md-8 col-lg-10 rounded-5 formulario">
                     <h2 class="mb-3">Entre em contato</h2>
                     <form>
                         <div class="form-group mb-3">
                             <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu nome completo">
+                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1" placeholder="Digite seu nome completo">
                         </div>
                         <div class="form-group mb-3">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="Escreva sua mensagem"></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar
-                                mensagem</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
-    <script src="script.js"></script>
-  
-</body>
-
-</html>
+                            <input type="email" id="email" name="email
