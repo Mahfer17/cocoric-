@@ -4,7 +4,124 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cocoricó — Site fã</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Paleta de Cores */
+    :root {
+      --yellow: #F9D12A;
+      --red: #FF3D00;
+      --blue: #0061F2;
+      --green: #7DCD2C;
+      --white: #ffffff;
+      --black: #333333;
+    }
+
+    /* Geral */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--white);
+      color: var(--black);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      color: var(--red);
+    }
+
+    .tagline {
+      color: var(--blue);
+      font-size: 1.2rem;
+    }
+
+    /* Header */
+    header.top {
+      background-color: var(--yellow);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    /* Personagens */
+    .characters .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background-color: var(--white);
+      padding: 15px;
+      border: 2px solid var(--yellow);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .card h3 {
+      color: var(--green);
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* Curiosidades */
+    .curiosities {
+      background-color: var(--blue);
+      color: var(--white);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .curiosities h2 {
+      font-size: 1.5rem;
+      color: var(--yellow);
+    }
+
+    .curiosities ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .curiosities li {
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer.footer {
+      background-color: var(--yellow);
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer .container p {
+      color: var(--black);
+    }
+
+    /* Botões */
+    .access-btn {
+      background-color: var(--green);
+      color: var(--white);
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+
+    .access-btn:hover {
+      background-color: var(--blue);
+    }
+
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Pular para o conteúdo</a>
@@ -20,7 +137,6 @@
     <!-- SOBRE -->
     <section class="about">
       <h2>Sobre o programa</h2>
-      <!-- Troque o src pela sua imagem (ex: imagens/fazenda.jpg) -->
       <img src="cocorico 7.jpeg" alt="Fazenda do Cocoricó" class="about-img" />
       <p><strong>Cocoricó</strong> é uma série infantil brasileira exibida inicialmente pela TV Cultura. Acompanha as histórias do Júlio e dos animais da fazenda: Lilica, Alípio, Zazá, Caco e mais. Mistura músicas, brincadeiras e aprendizados para crianças.</p>
     </section>
@@ -30,7 +146,6 @@
       <h2>Personagens principais</h2>
       <div class="grid">
         <article class="card julio" aria-labelledby="julio-title">
-          <!-- Troque a imagem pelo arquivo que preferir -->
           <img src="imagem1.webp" alt="Júlio" />
           <h3 id="julio-title">Júlio 🎶</h3>
           <p>Garoto curioso, adora cantar e brincar com os animais da fazenda.</p>
@@ -69,12 +184,9 @@
         <li>Estreou em 1996 na TV Cultura.</li>
         <li>Usa bonecos manipulados por artistas e muita música.</li>
         <li>Possui episódios educativos com valores como amizade e respeito.</li>
-        <li>O "Poder" de Júlio
-          Júlio tinha a habilidade única de conversar com os animais da fazenda, 
-          fazendo com que marionetes e bonecos ganhassem vida e transmitissem lições valiosas para as crianças.</li>
-          <li>Cada galinha no programa tinha uma personalidade única, inspirada em diferentes animais reais, como cabras 
-            e patos, o que dava um toque especial e criativo aos personagens. </li>
-        </ul>
+        <li>O "Poder" de Júlio: Júlio tinha a habilidade única de conversar com os animais da fazenda, fazendo com que marionetes e bonecos ganhassem vida e transmitissem lições valiosas para as crianças.</li>
+        <li>Cada galinha no programa tinha uma personalidade única, inspirada em diferentes animais reais, como cabras e patos, o que dava um toque especial e criativo aos personagens.</li>
+      </ul>
     </section>
   </main>
 
@@ -91,7 +203,6 @@
           aria-haspopup="true"
           aria-controls="accessPanel"
           aria-expanded="false">
-    <!-- Substitua por uma pequena imagem/ícone se quiser -->
     <img src="imagens/cocorico-icon.png" alt="Acessibilidade Cocoricó" />
   </button>
 
@@ -106,7 +217,7 @@
     <div class="row">
       <span>Tamanho da fonte</span>
       <div class="btns">
-        <button class="control" data-action="font-decrease" aria-label="Diminuir fonte">A-</button>
+        <button class="cosntrol" data-action="font-decrease" aria-label="Diminuir fonte">A-</button>
         <button class="control" data-action="font-reset" aria-label="Redefinir fonte">A</button>
         <button class="control" data-action="font-increase" aria-label="Aumentar fonte">A+</button>
       </div>
@@ -122,143 +233,5 @@
     <div class="row">
       <span>Animações</span>
       <div class="btns">
-        <button class="toggle" data-action="reducemotion" aria-pressed="false">Reduzir animações</button>
-      </div>
-    </div>
-
-    <div class="row">
-      <button id="closeAccess" class="control full" aria-label="Fechar painel">Fechar</button>
-    </div>
-  </div>
-
-  <script>
-  (function () {
-    const html = document.documentElement;
-    const body = document.body;
-    const accessBtn = document.getElementById('accessBtn');
-    const panel = document.getElementById('accessPanel');
-    const closeBtn = document.getElementById('closeAccess');
-
-    // Estado com persistência
-    const state = {
-      fontScale: parseFloat(localStorage.getItem('coco_fontScale')) || 1,
-      contrast: localStorage.getItem('coco_contrast') === 'true',
-      reduceMotion: localStorage.getItem('coco_reduceMotion') === 'true'
-    };
-
-    // Apply visual state
-    function applyState() {
-      // fonte via variável no :root
-      html.style.setProperty('--font-scale', state.fontScale);
-      body.classList.toggle('high-contrast', state.contrast);
-      body.classList.toggle('reduce-motion', state.reduceMotion);
-
-      // atualiza aria-pressed nos toggles
-      const contrastBtn = panel.querySelector('[data-action="contrast"]');
-      const rmBtn = panel.querySelector('[data-action="reducemotion"]');
-      if (contrastBtn) contrastBtn.setAttribute('aria-pressed', String(state.contrast));
-      if (rmBtn) rmBtn.setAttribute('aria-pressed', String(state.reduceMotion));
-    }
-
-    function saveState() {
-      localStorage.setItem('coco_fontScale', state.fontScale);
-      localStorage.setItem('coco_contrast', state.contrast);
-      localStorage.setItem('coco_reduceMotion', state.reduceMotion);
-    }
-
-    // toggle panel (open = true/false or toggle when omitted)
-    function togglePanel(open) {
-      const willOpen = (typeof open === 'boolean') ? open : !panel.classList.contains('open');
-      if (willOpen) {
-        panel.classList.add('open');
-        panel.setAttribute('aria-hidden', 'false');
-        accessBtn.setAttribute('aria-expanded', 'true');
-        // foco no primeiro botão do painel
-        const first = panel.querySelector('button');
-        if (first) first.focus();
-        // ativa trap de foco
-        document.addEventListener('keydown', handleKeydown);
-      } else {
-        panel.classList.remove('open');
-        panel.setAttribute('aria-hidden', 'true');
-        accessBtn.setAttribute('aria-expanded', 'false');
-        accessBtn.focus();
-        document.removeEventListener('keydown', handleKeydown);
-      }
-    }
-
-    // Focus trap + ESC
-    function handleKeydown(e) {
-      if (e.key === 'Escape') {
-        togglePanel(false);
-        return;
-      }
-      if (e.key !== 'Tab') return;
-      const focusable = panel.querySelectorAll('button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])');
-      if (!focusable.length) return;
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      if (e.shiftKey) {
-        if (document.activeElement === first) {
-          e.preventDefault();
-          last.focus();
-        }
-      } else {
-        if (document.activeElement === last) {
-          e.preventDefault();
-          first.focus();
-        }
-      }
-    }
-
-    // Clique fora fecha
-    document.addEventListener('click', (e) => {
-      if (!panel.classList.contains('open')) return;
-      if (!panel.contains(e.target) && !accessBtn.contains(e.target)) {
-        togglePanel(false);
-      }
-    });
-
-    // Delegação de ações dentro do painel
-    panel.addEventListener('click', (e) => {
-      const btn = e.target.closest('button');
-      if (!btn) return;
-      const action = btn.getAttribute('data-action');
-      if (!action) return;
-      switch (action) {
-        case 'font-increase':
-          state.fontScale = Math.min(1.6, +(state.fontScale + 0.1).toFixed(2));
-          break;
-        case 'font-decrease':
-          state.fontScale = Math.max(0.85, +(state.fontScale - 0.1).toFixed(2));
-          break;
-        case 'font-reset':
-          state.fontScale = 1;
-          break;
-        case 'contrast':
-          state.contrast = !state.contrast;
-          break;
-        case 'reducemotion':
-          state.reduceMotion = !state.reduceMotion;
-          break;
-      }
-      applyState();
-      saveState();
-    });
-
-    // fechar botão específico
-    closeBtn.addEventListener('click', () => togglePanel(false));
-
-    // abrir/fechar com o botão principal
-    accessBtn.addEventListener('click', (e) => {
-      togglePanel();
-      e.stopPropagation();
-    });
-
-    // aplica estado inicial
-    applyState();
-  })();
-  </script>
-</body>
-</html>
-  
+        <button class="toggle"
+```
